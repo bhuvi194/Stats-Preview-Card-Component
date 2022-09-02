@@ -1,0 +1,120 @@
+:root{
+    --main-background:  hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --image-upper:  hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats-heading: hsla(0, 0%, 100%, 0.6);
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.records{
+    font-family: 'Lexend Deca', sans-serif;
+} 
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-background);
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.wrapper{
+    width: 70vw;
+    background-color: var(--card-background);
+    border-radius: 7px;
+    display: flex;
+}
+ 
+.wrapper .card{
+    width: 50%;
+    padding: 4rem;
+}
+.wrapper .card h1{
+    font-size: 2rem;
+}
+
+.wrapper .card h1 span{
+    font-size: 2rem;
+    color: var(--image-upper);
+}
+
+.wrapper .card p{
+    color: var(--main-paragraph);
+    margin: 1.5rem 0 3rem;
+}
+
+.wrapper .records{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .records .record-num{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.wrapper .records .record-title{
+    text-transform: uppercase;
+    color: var(--stats-heading);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+.wrapper .card-picture{
+    width: 50%;
+    border-radius: 0 7px 7px;
+    background: linear-gradient(0deg, hsla(277, 64%, 61%, 0.5)0%, hsla(277, 64%, 61%, 0.5)100%),
+    url(./images/image-header-desktop.jpg) 
+    center no-repeat;
+    background-size: cover;
+}
+
+/* responsive */
+@media screen and  (min-width: 1565px){
+    .wrapper{
+        max-width: 1000px;
+        
+    }
+} 
+@media screen and  (max-width: 768px) {
+    .wrapper{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 98vw;
+        height: 90vh;
+        margin: 0 7%;
+    }
+    .wrapper .card{
+        width: 100%;
+        height: 78%;
+        text-align: center;
+    }
+    .wrapper .records{
+        flex-direction: column;
+    }
+    .wrapper .records #record-block1,
+    .wrapper .records #record-block2{
+        margin-bottom: 2rem;
+    }
+    .wrapper .card-picture{
+        height: 30%;
+        width: 100%;
+        border-radius: 7px 7px 0 0;
+    }
+}
+
